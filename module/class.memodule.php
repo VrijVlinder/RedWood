@@ -8,14 +8,16 @@ You should have received a copy of the GNU General Public License along with Gar
 Contact Vanilla Forums Inc. at support [at] vanillaforums [dot] com
 */
 
-/**
- * An associative array of information about this application.
- */
-$ThemeInfo['RedWood'] = array(
-   'Name' => 'RedWood',
-   'Description' => "A woodsy embed friendly and full scale theme for 2.1 . This theme is very dynamic and can be placed anywhere. Use it in a Facebook Page Or anywhere you want.Has a mobile theme to match",
-   'Version' => '1.8',
-   'Author' => "VrijVlinder",
-   'AuthorEmail' => 'contact@vrijvlinder.com',
-   'AuthorUrl' => 'vrijvlinder.com'
-);
+class MeModule extends Gdn_Module {
+   
+   public $CssClass = '';
+   
+   public function __construct() {
+      parent::__construct();
+      $this->_ApplicationFolder = 'dashboard';
+   }
+   
+   public function AssetTarget() {
+      return 'Panel';
+   }
+}

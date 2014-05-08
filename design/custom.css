@@ -3,21 +3,20 @@ height:1000px;
 margin:15px 10px 0 auto;
 text-align:left;
 width:100%;
-min-height:900px;
 }
- 
+
 #Bookmark_List {
 border-bottom:none;
 }
- 
+
 #Bookmark_List li {
 border-bottom:1px solid #555;
 }
- 
-#CommentInfo,.CommentInfo {
-display:inline-block;
+
+#CommentInfo,div.CommentInfo {
+
 }
- 
+
 #Content {
 -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 -webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
@@ -28,13 +27,22 @@ border:1px solid #666;
 box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 margin-left:10px;
 padding:0;
-width:65%;
+width:69%;
+float:left;
 }
- 
+#Content .BoxFilter {
+display: inline;
+text-align: center;
+}
+#Content .BoxFilter .Active a {
+color:#000;
+border-bottom: 0!important;
+}
+
 #Content,#Panel {
 opacity:10;
 }
- 
+
 #ConversationForm .TextBox {
 background-color:#222;
 height:100px;
@@ -42,7 +50,7 @@ margin:8px 0 6px;
 min-height:100px;
 width:100%;
 }
- 
+
 #ConversationForm form {
 background-color:transparent;
 border-radius:2px 2px 2px 2px;
@@ -50,7 +58,7 @@ margin:0;
 padding:20px;
 text-align:right;
 }
- 
+
 #ConversationForm label {
 color:#CCC;
 display:block;
@@ -58,25 +66,30 @@ font-size:14px;
 font-weight:700;
 text-align:left;
 }
- 
+
 #DiscussionForm form {
-background-color:transparent;
-background-image:url(images/parquet.jpg);
-background-repeat:repeat;
-border:1px solid #444;
-color:#fff;
+background-color: transparent;
+background-image: none;
+border: 0;
+color: #fff;
+width: 80%;
+margin: 0 auto;
 }
- 
+
 #Foot {
 background:transparent;
 margin-bottom:10px;
 }
- 
+
 #Foot div {
 margin:0 auto;
 padding:0;
 }
- 
+#Foot a {
+display: inline-block;
+width: auto;
+}
+
 #Form_Form {
 background-color:transparent;
 background-image:url(images/parquet.jpg);
@@ -84,37 +97,41 @@ background-repeat:repeat;
 border:1px solid #333;
 padding-bottom:10px;
 }
- 
+#Form_Comment{
+	display:block;
+}
+
 #Head {
 background-color:transparent;
 background-repeat:repeat;
 border:none;
 padding-left:10px;
 }
- 
+
 #Head div h1 a span img {
 height:auto;
 width:680px;
 }
- 
+
 #Menu {
 display:inline-block;
 margin:0 auto;
 vertical-align:bottom;
 }
- 
-#Menu a span,#Menu li.Active a span,#Menu li.Highlight a:hover span {
--moz-border-radius:11px;
--webkit-border-radius:11px;
-background:#fff;
-border-radius:11px;
-color:#000;
-font-size:11px;
-font-weight:700;
-padding:0 2px;
-text-shadow:none;
+
+ul#Menu a span, ul#Menu li.Active a span, ul#Menu li.Highlight a:hover span {
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+padding: 0 2px;
+font-size: 11px;
+line-height: 1;
+font-weight: bold;
+text-shadow: none;
+background: #fff;
+color: #000;
 }
- 
+
 #Menu a:hover {
 -moz-box-shadow:0 0 5px #aaa;
 -webkit-box-shadow:0 0 5px #aaa;
@@ -122,49 +139,44 @@ background:url(images/parquet.jpg);
 border:1px solid #222;
 box-shadow:0 0 5px #aaa;
 color:#fff;
-font-size:12pt;
+font-size:12px;
 }
- 
+
 #Menu a:link {
-font-size:12pt;
+font-size:12px;
 text-decoration:none;
 }
- 
+
 #Menu li {
-display:inline-block;
-float:right;
-font-weight:700;
-line-height:1.5;
-list-style:none outside none;
-margin:0;
-padding:1px!important;
-position:relative;
-text-align:center;
+display: inline-block;
+list-style: none outside none;
+margin: 1px 0 10px;
+position: relative;
 }
- 
+
 #MessageForm {
 background:#333;
 }
- 
+
 #Panel {
-float:right!important;
-margin-right:10px;
-width:250px;
+float: right!important;
+margin-right: 10px;
+width: 28%!important;
 }
- 
+
 #Panel form input.Button {
 -box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 -webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 border:medium none;
-font-size:12pt;
+font-size:12px;
 font-weight:700;
 height:28px;
 margin-bottom:3px;
 padding:0;
 width:26px;
 }
- 
+
 #Panel form input.InputBox {
 -box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
@@ -181,360 +193,279 @@ font-weight:700;
 padding:5px;
 text-shadow:0 1px 0 #000;
 vertical-align:bottom;
-width:204px;
+width: 88%!important;
+margin-left: 0;
 }
- 
-#Panel input.InputBox,.AddPeople textarea.MultiComplete {
-margin-bottom:2px;
-width:188px;
+
+#Panel input.InputBox, .AddPeople textarea.MultiComplete {
+width: 100%;
+margin: 2px;
 }
- 
+#Panel input#Form_Add.Button.Action{
+	width: 100%;
+}
 #Status {
 background-color:transparent;
 background-image:url(images/parquet.jpg);
 background-repeat:repeat;
 padding-bottom:5px;
 }
- 
+
 #ThemeCredit {
 color:#333;
 font-size:9px;
 }
- 
-#menu-bar {
--moz-border-radius:3px;
--webkit-border-radius:3px;
-background:url(images/woodnav.png);
-background-repeat:repeat-x;
-border:1px solid #999;
-border-radius:3px;
-box-shadow:0 0 2px #999;
-color:#fff;
-cursor:pointer;
-display:inline-block;
-font-size:14px;
-font-weight:700;
-height:35px;
-line-height:100%;
-margin:0;
-padding:0;
-text-align:center;
-text-shadow:0 1px 0 #000;
-width:248px;
-}
- 
-#menu-bar .current a,#menu-bar li:hover > a {
--moz-box-shadow:0 1px 1px rgba(0,0,0,.2);
--webkit-box-shadow:0 1px 1px rgba(0,0,0,.2);
-background:transparent;
-box-shadow:0 1px 1px rgba(0,0,0,.2);
-color:lime;
-text-shadow:2px 2px 3px #000;
-}
- 
-#menu-bar a {
--moz-border-radius:5px;
--webkit-border-radius:5px;
-border-radius:5px;
-color:#fff;
-display:block;
-font-family:arial;
-font-size:20px;
-font-style:normal;
-font-weight:700;
-margin:0 auto;
-padding:10px 20px 8px 80px;
-text-decoration:none;
-text-shadow:2px 1px 0 #000;
-}
- 
-#menu-bar li {
-float:left;
-list-style:none;
-margin:0 6px;
-padding:0 0 7px;
-position:relative;
-}
- 
-#menu-bar li:hover > ul,html[xmlns] #menu-bar {
-display:block;
-}
- 
-#menu-bar ul {
--moz-border-radius:5px;
--moz-box-shadow:2px 2px 3px #222;
--webkit-border-radius:5px;
--webkit-box-shadow:2px 2px 3px #222;
-background:url(images/parquet.jpg)!important;
-border:solid 1px #222;
-border-radius:5px;
-box-shadow:2px 2px 3px #222;
-display:none;
-left:0;
-margin:0;
-padding:0;
-position:absolute;
-top:30px;
-width:240px;
-z-index:100;
-}
- 
-#menu-bar ul a {
-color:#FFF!important;
-font-family:arial;
-font-size:14px;
-font-style:normal;
-font-weight:700;
-padding:10px 0 10px 15px;
-text-shadow:2px 2px 3px #000;
-}
- 
-#menu-bar ul a:hover {
--moz-border-radius:0;
--webkit-border-radius:0;
-background:url(images/transparent2.png);
-background-repeat:repeat-x;
-border-radius:0;
-color:lime!important;
-text-shadow:2px 2px 3px #000;
-}
- 
-#menu-bar ul li {
-float:none;
-margin:0;
-padding:0;
-}
- 
-#menu-bar ul li:first-child > a {
--moz-border-radius-topleft:5px;
--moz-border-radius-topright:5px;
--webkit-border-top-left-radius:5px;
--webkit-border-top-right-radius:5px;
-border-top-left-radius:5px;
-border-top-right-radius:5px;
-}
- 
-#menu-bar ul li:hover a,#menu-bar li:hover li a {
--box-shadow:none;
--moz-box-shadow:none;
--webkit-box-shadow:none;
-background:none;
-border:none;
-color:#fff;
-}
- 
-#menu-bar ul li:last-child > a {
--moz-border-radius-bottomleft:5px;
--moz-border-radius-bottomright:5px;
--webkit-border-bottom-left-radius:5px;
--webkit-border-bottom-right-radius:5px;
-border-bottom-left-radius:5px;
-border-bottom-right-radius:5px;
-}
- 
-#menu-bar:after {
-clear:both;
-content:".";
-display:block;
-height:0;
-line-height:0;
-visibility:hidden;
-}
- 
-#menu-bar:hover {
--moz-box-shadow:0 0 5px #aaa;
--webkit-box-shadow:0 0 5px #aaa;
-background:url(images/menu_bg.png) transparent;
-border:1px solid #666;
-box-shadow:0 0 5px #aaa;
-}
- 
-* html #menu-bar {
-height:1%;
-}
- 
+
 .Active .TabLink {
 background:#111;
 border:1px solid #222;
 color:#fff;
 }
- 
+.AdminCheck {
+vertical-align: top;
+line-height: 1;
+float: left;
+padding: 0 4px;
+}
+
 .Activities .DataList li {
 background:#111;
 border:1px solid #333;
 }
- 
+.Activities ul.DataList {
+margin-left: 0;
+}
 .Activities .Excerpt {
 color:#FFF;
 font-weight:700;
 }
- 
+
 .Activities .Excerpt a:hover,.Activities .Meta a:hover {
 color:#0f0;
-font-size:10pt;
+font-size:10px;
 text-decoration:none;
 }
- 
+
 .Activities .HasPhoto .ItemContent {
 margin-left:53px;
 width:auto;
 }
- 
+
 .Activities li.Condensed .Excerpt {
 font-size:14px;
 text-align:left;
 text-shadow:0 1px 0 #000;
 width:auto;
 }
- 
-.AttachFileWrapper table.AttachFileContainer tr.FileAttachment td .ProgressBar {
-background-color:transparent;
-border:0;
-font-size:14px;
-height:39px;
-width:126px;
+
+.Box, #Panel .BoxFilter, ul.PopList.Popin, ul.PopList.Conversations, ul.PopList, .About.P {
+-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+background: #222;
+border: 1px solid #555;
+color: #ccc;
+box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
- 
-.AttachFileWrapper table.AttachFileContainer tr.FileAttachment td .ProgressBar .ProgressTicker {
-background:url(images/upload-progress-back1.gif)!important;
-background-color:transparent;
-color:#fff;
-font-size:14px;
-height:39px;
-line-height:14px;
-padding-right:2px;
-text-align:right;
-}
- 
-.Box {
--moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
--webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-background:#222;
-border:1px solid #555;
-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-}
- 
 .Box dl dt {
 color:#555;
 }
- 
+.Box .P {
+margin: 5px 0;
+text-align: center;
+}
 .Box h4 {
-background-color:#222;
-background-repeat:repeat;
-border:1px solid #555;
-box-shadow:none;
-color:#fff;
-text-align:center;
+background-color: #222;
+background-repeat: repeat;
+border-bottom: 1px solid #555;
+box-shadow: none;
+color: #fff;
+text-align: center;
+font-size: 16px;
+padding: 4px;
 }
- 
+
 .Box p {
-font-size:100%;
-padding:0 0 4px;
-text-align:center;
+font-size: 100%;
+padding: 4px;
+color: #ccc;
 }
- 
+
 .Box p,.Activities .Excerpt a,.Activities .Meta a,body.Entry form ul li label {
 color:#ddd;
 }
- 
-.Box.About h4,.Box.CategoryFollowToggleBox h4,.Box.GuestBox h4 {
-background:url(images/parquet.jpg);
+.ButtonGroup.Open .NavButton.Handle {
+background: #0f0;
 }
- 
-.Comment {
-color:#3f3;
-font:family:Arial;
-font-size:12pt!important;
+.ButtonBar .ButtonWrap {
+background-color: rgba(255, 173, 84,0.5)!important;
+border: 1px solid #222;
+height: 26px!important;
+width: 26px!important;
+border-radius: 24px;
+-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
- 
+.ButtonBar .ButtonWrap:hover{
+	background-color:#ccc!important;
+	-moz-box-shadow:0 0 5px #aaa;
+-webkit-box-shadow:0 0 5px #aaa;
+border:1px solid #222;
+box-shadow:0 0 5px #aaa;
+}
+.ButtonBar .ButtonBarQuote {
+background-position: 1px -167px;
+}
+
+.ButtonBar .ButtonBarUrl {
+background-position: 1px -143px;
+}
+.ButtonBar .ButtonBarImage {
+background-position: 1px -119px;
+}
+.ButtonBar .ButtonBarCode {
+background-position: 1px -95px;
+}
+.ButtonBar .ButtonBarStrike {
+background-position: 1px -71px;
+}
+.ButtonBar .ButtonBarUnderline {
+background-position: 1px -46px;
+}
+.ButtonBar .ButtonBarItalic {
+background-position: 1px -23px;
+}
+.ButtonBar .ButtonBarBold {
+background-position: 1px 1px;
+}
+.BarWrap {
+background: transparent;
+border: 0;
+margin: 0 0 -1px;
+line-height: 0.1;
+}
+.stButton {
+position: relative;
+z-index: 1;
+text-decoration: none;
+color: #000;
+display: inline-block;
+cursor: pointer;
+margin: 0!important;
+font-size: 11px;
+line-height: 100%!important;
+border-radius: 28px!important;
+}
+.stButton .stLarge, .stButton:hover .stLarge:hover {
+display: inline-block;
+height: 28px!important;
+width: 28px!important;
+position: relative;
+background: -2px -2px;
+border-radius: 28px!important;
+padding: 0;
+top: 0!important;
+}
+.st_fblike_large {
+display: inline-block;
+position: relative;
+padding: 5px 0 0;
+top: 0!important;
+left: -10px!important;
+}
 .Conversation .Item {
 background-color:transparent;
 background-image:url(images/parquet.jpg);
 background-repeat:repeat;
 border-bottom:1px solid #444;
 }
- 
+
 .DataList .Excerpt a {
-color:#fff;
-display:block;
-font-size:11pt;
+color: #fff;
+display: block;
+font-size: 14px!important;
 }
- 
 .DataList .Excerpt a:hover {
-font-size:11pt;
+color: #f00!important;
+display: block;
+
 }
- 
-.DataList .Item {
-background-color:transparent;
-background-image:url(images/parquet.jpg);
-background-repeat:repeat;
-border:2px solid #222;
+
+
+.DataList .Item, .feedEkList.DataList li.Item {
+background-color: transparent;
+background-image: url(images/parquet.jpg);
+background-repeat: repeat;
+border: 2px solid #222;
 }
- 
+
 .DataList .Meta {
 color:#adadad;
 font-size:13px;
 }
- 
+
 .DataList .Meta .Announcement {
 background:none repeat scroll 0 0 #4242A9;
 font-size:13px;
 font-weight:700;
 }
- 
+
 .DataList .Meta .Closed {
 background:#bb3c3c;
 font-weight:400;
 }
- 
-.DataList .Options,.MessageList .Options {
-margin:7px 4px 0 0;
+.DataList .Options{
+left: 1%;
+float: right;
+position: relative;
 }
- 
-.DataList a.Delete,.DataList a.Delete:hover {
--moz-border-radius:0;
--webkit-border-radius:0;
-border-radius:0;
-color:#fff;
-display:block;
-font-family:arial;
-font-size:25px;
-font-weight:700;
-height:25px;
-line-height:1;
-margin:0;
-padding:2px 4px;
-width:auto;
+.MessageList .Options {
+left: 0;
+float: right;
+position: relative;
 }
- 
+
+.DataList a.Delete, .DataList a.Delete:hover {
+display: block;
+font-family: arial;
+font-size: 25px!important;
+height: 25px;
+line-height: 1;
+margin: 0;
+padding: 4px;
+width: 25px;
+color: #fff;
+}
+
 .DataList li.Mine .Meta a.Category,.DataList .Meta a.Category {
 background:#555;
 }
- 
 .DismissMessage.Box {
--moz-box-shadow:none;
--webkit-box-shadow:none;
 background:transparent;
-border:none;
-box-shadow:none;
-color:#fff;
-font-size:14px;
+border: none;
+box-shadow: none;
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+font-size: 14px;
+color: #fff;
 }
- 
-.DismissMessage.Info {
-background:#0F0;
-border-color:#222;
-border-style:solid;
-border-width:1px;
-font:family:Arial;
-font-size:12pt;
-font-weight:700;
+.Discussion .PageTitle h1 {
+font-size: 20px;
+line-height: 1.2;
 }
- 
+.DiscussionForm .Category, .DiscussionForm input.InputBox, .DiscussionForm input.InputBox:focus {
+width: 100%;
+margin-bottom: 10px;
+}
+.EditCommentForm textarea.TextBox, .CommentForm textarea.TextBox {
+min-height: 150px;
+height: 100%;
+width: 100%!important;
+}
 .Emoticon a:link:hover,.Emoticon img:hover,.Emoticon a:hover,.Emoticon:hover {
-background:#0f0!important;
+background-color:#0f0!important;
 }
- 
+
 .EmoticonBox {
 -moz-border-bottom-colors:none;
 -moz-border-left-colors:none;
@@ -554,7 +485,7 @@ height:22px;
 overflow:hidden;
 width:22px;
 }
- 
+
 .EmotifyDropdown {
 background-attachment:scroll;
 background-clip:border-box;
@@ -568,50 +499,38 @@ border-radius:22px 22px 22px 22px;
 cursor:pointer;
 height:22px;
 position:absolute;
-right:0;
+right:10px;
 text-align:right;
 top:2px;
 width:22px;
 z-index:10;
 }
- 
-.Empty,a.Bookmark span,a.Bookmarking span {
-display:none;
+
+.Empty, a.Bookmark span, a.Bookmarking span {
+display: block;
 }
- 
-.Entry.SingleEntryMethod {
-background:#666;
-border-color:#222;
-border-width:1px;
-font:family:Arial;
+.EditCommentForm .Buttons .Cancel, .CommentForm .Buttons .Cancel, .CommentForm .Buttons .Back {
+float: left;
+line-height: 2.2;
 }
- 
-.Entry.SingleEntryMethod Label {
-font-color:#adadad;
+.Bullet{
+	display:none;
 }
- 
-.Entry.SingleEntryMethod h1 {
-background:url(images/woodnav.png);
-border-color:#222;
-border-style:solid;
-border-width:1px;
-color:#000;
-font:family:Arial;
-}
- 
 .Foot {
 background:transparent;
 border:1px solid #222;
-border-color:#222;
 }
- 
+
 .Foot .Note {
 color:#000;
 float:left;
 font-weight:700;
 padding:0 0 0 8px;
 }
- 
+.FlyoutMenu a {
+color:#fff;
+font-size: 12px;
+}
 .HeadingTabs .SubTab {
 background:none repeat scroll 0 0 transparent;
 display:inline;
@@ -620,13 +539,13 @@ font-weight:700;
 line-height:2.4;
 padding:0;
 }
- 
+
 .Headings .ItemHeading {
 font-size:18px;
 font-weight:700;
 line-height:2;
 }
- 
+
 .Item .Author img {
 background:none repeat scroll 0 0 #222;
 border:2px solid #222;
@@ -637,7 +556,20 @@ margin:0 10px 0 0;
 overflow:hidden;
 width:40px;
 }
- 
+.ItemDiscussion .Meta span a, .DataList .Meta span a {
+font-size: 12px;
+color: #fff;
+}
+.ItemDiscussion .Meta span a:hover, .DataList .Meta span a:hover {
+font-size: 12px;
+color: #ff0;
+}
+.MItem {
+margin-left: 8px;
+margin-right: 8px;
+white-space: pre-line;
+}
+
 .Item .Author img:hover {
 background:none repeat scroll 0 0 #222;
 border:none;
@@ -649,25 +581,113 @@ margin:0 10px 0 0;
 overflow:hidden;
 width:43px;
 }
- 
-.ItemContent.Category.Read a,span.Breadcrumb.FirstCrumb a {
-font-size:16px;
+.MainForm ul{
+	padding:4px;
 }
- 
+.MeMenu .ToggleFlyout, .MeBox .PhotoWrap,.Pager a, .Pager span {
+-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+background: url(images/woodnav.png);
+background-repeat: repeat-x;
+border: 1px solid #222;
+border-radius: 3px 3px 3px 3px;
+box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-size: 14px;
+font-weight: 700;
+margin: 0 0 10px;
+padding: 3px 6px;
+text-align: center;
+text-shadow: 0 1px 0 #000;
+}
+.MeMenu .ToggleFlyout:hover, .MeBox .PhotoWrap:hover,.Pager a:hover, .Pager span:hover {
+-moz-box-shadow:0 0 5px #aaa;
+-webkit-box-shadow:0 0 5px #aaa;
+background:url(images/parquet.jpg);
+border:1px solid #222;
+box-shadow:0 0 5px #aaa;
+color:lime;
+font-size: 14px;
+}
+.MeBox .ProfilePhotoMedium {
+height: 25px;
+width: 25px;
+}
+.MeBox .Flyout, .MenuItems {
+-moz-border-radius: 5px;
+-moz-box-shadow: 0 0 2px #999;
+-webkit-border-radius: 5px;
+-webkit-box-shadow: 0 0 2px #999;
+background: url(images/transparent2.png);
+border: 2px solid #222;
+border-radius: 5px;
+box-shadow: 0 0 2px #999;
+left: 0;
+margin: 0;
+padding: 0;
+position: absolute;
+top: 25px;
+min-width: 130px;
+width: 100%;
+}
+.MeBox-SignIn {
+display: none!important;
+}
+.UserBox, .MeBox {
+margin: 10px 0;
+display: inline-block;
+width: 100%;
+}
+.UserBox .PhotoWrap, .MeBox .PhotoWrap {
+float: left;
+top:0;
+position: relative;
+line-height: 1;
+}
+.MeBox .Username{
+	display:none;
+}
+.Flyout .Author .PhotoWrap img {
+margin: 0!important;
+width: 25px!important;
+height: 25px!important;
+}
+.Flyout .Author .PhotoWrap img:hover {
+margin: 0!important;
+width: 25px!important;
+height: 25px!important;
+}
+.Flyout:before, .Flyout:after {
+border-bottom: 7px solid #222;
+border-left: 7px solid #222;
+border-right: 7px solid #222;
+content: initial;
+left: 9px;
+position: absolute;
+border-top: 0;
+}
+.Form-Header span.Author{
+	display:none;
+}
+.CommentForm .FormWrapper {
+padding: 0 0 60px;
+}
 .Menu {
-margin:0 auto;
-position:relative;
-text-align:center;
-vertical-align:bottom;
-width:100%;
+margin: 0 auto;
+position: relative;
+text-align: center;
+vertical-align: bottom;
+width: 100%;
 }
- 
+
 .Menu h1 span img {
 height:auto;
 margin:0 auto;
 width:100%;
 }
- 
+
 .MenuTitle {
 -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 -moz-user-select:none;
@@ -685,70 +705,105 @@ font-weight:700;
 padding:6px;
 text-shadow:0 1px 0 #000;
 }
- 
-.Message {
-background:url(images/transpb.png);
-color:#fff;
-font:family:Arial;
-font-size:12pt!important;
-font-weight:700;
-}
- 
-.Message img {
--moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
--webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-border:1px solid #222;
-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-width:98%!important;
-}
- 
+
 .MessageForm,.Tabs,.Headings {
 background:url(images/parquet.jpg);
 background-color:transparent;
 border:2px solid #222;
 }
- 
+
 .MessageList .Meta .Author a {
 font-size:15px;
 font-weight:700;
 }
- 
+
 .MessageList .Meta a,span.DateCreated a:hover {
-font-size:10pt;
+font-size:10px;
 }
- 
+
 .MultipleEntryMethods .Methods {
-background:url(images/parquet.jpg);
-border:solid 1px #222;
-font:color:#fff;
+border: solid 1px #222;
+background: url(images/parquet.jpg);
+color:#fff;
 }
- 
+.OptionsTitle {
+width: 16px;
+height: 16px;
+display: inline-block;
+vertical-align: middle;
+line-height: 100%;
+overflow: hidden;
+font-size: 0;
+cursor: pointer;
+border-radius: 16px;
+background-position: 0px -122px;
+border: 2px solid #000;
+padding: 0;
+background-color: rgba(255, 173, 84,0.6)!important;
+-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+box-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+.Open > .OptionsTitle {
+background-color: rgba(255, 173, 84,1)!important;
+-moz-box-shadow:0 0 5px #aaa;
+-webkit-box-shadow:0 0 5px #aaa;
+box-shadow:0 0 5px #aaa;
+border:1px solid #222;
+}
+.PageTitle .Options {
+height: 10px;
+width:70px;
+}
+div.Discussion:hover .OptionsTitle:hover, .Item:hover .OptionsTitle:hover {
+background-position: 0px -122px;
+background-color: rgba(255, 173, 84,1)!important;
+-moz-box-shadow:0 0 5px #aaa;
+-webkit-box-shadow:0 0 5px #aaa;
+box-shadow:0 0 5px #aaa;
+border:1px solid #222;
+}
+.P.PageDescription{
+	padding: 4px;
+	font-size:15px;
+	font-style:italic;
+}
+.Pager {
+font-weight: bold;
+float: right;
+height: 23px;
+margin-top: 0;
+}
 .PanelInfo {
-border:1px solid #555;
+border: 0;
 }
- 
+
 .PanelInfo .Active {
 background:#fff;
 border:none;
 }
- 
+
 .PanelInfo .Meta span,.PanelInfo .Meta strong {
 color:#ccc;
 margin-right:10px;
 }
- 
-.PanelInfo li {
-background:url(images/parquet.jpg);
-border:none;
+
+.PanelInfo li, #Panel .FilterMenu li, .PanelInfo li, .PanelActivity li {
+background: url(images/parquet.jpg);
+border: 1px solid #222;
+color: #ccc;
 }
- 
+.PanelActivity {
+border-top: 0;
+border-bottom: 0;
+}
 .Photo img {
 -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 -webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 border:1px solid #555;
 box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 }
- 
+
 .Popup #ConversationForm form {
 background-color:transparent;
 background-image:url(images/parquet.jpg);
@@ -756,72 +811,119 @@ background-repeat:repeat;
 border-radius:0 0 0 0;
 padding:10px;
 }
- 
+
 .Popup #Form_Form {
 background:#fff;
 }
- 
-.Popup #Form_Form,.Popup .Legal,.Popup .Content form {
-background-color:transparent;
-background-image:url(images/parquet.jpg);
-background-repeat:repeat;
-color:#fff;
-font-size:14pt;
-font-weight:700;
+
+.Popup #Form_Form, div.Popup .Legal, div.Popup .Content form {
+background-color: transparent;
+background-image: url(images/parquet.jpg);
+background-repeat: repeat;
+color: #fff;
+font-size: 14px;
+font-weight: 700;
+padding: 4px;
 }
- 
-.Popup a,#ThemeCredit a {
-color:#ADADAD;
+.PopList .ItemContent {
+margin: 0;
+line-height: 1.4;
+text-align: left;
 }
- 
-.Popup a:hover {
-text-decoration:none;
-}
- 
-.Popup h1,.Popup h2 {
-background:url(images/woodnav.png);
-background-repeat:repeat-x;
-border:1px solid #666;
-border-radius:0;
-box-shadow:0 0 2px #999;
-color:#fff;
-font-size:18px;
-}
- 
-.Popup,.PanelInfo .Active a {
-color:#111;
-font-size:14px;
-}
- 
 .Preview {
-background:#222!important;
 background-color:transparent;
 background-image:url(images/parquet.jpg);
 background-repeat:repeat;
 border:1px solid #444;
-font-size:14px;
 }
- 
+
 .Preview .Message a,.Preview .Message p a,.MessageList .Message a,.MessageList .Message p span a,.Message span a {
 color:#0f0;
 }
- 
+
 .Preview .Message a:hover,.Preview .Message p a:hover,.MessageList .Message a:hover,.MessageList .Message p span a:hover,.Message span a:hover {
 color:#FFD700;
 }
- 
+
 .Preview .Message,.Preview .Message p,.MessageList .Message,.MessageList .Message p span,.Message span {
 color:#fff!important;
 margin:8px 0;
 }
- 
+.Profile .MeBox {
+display: block;
+}
+.ProfilePhotoLarge {
+width: 98%;
+}
+.Reactions {
+position: relative;
+font-size: 11px;
+line-height: 18px;
+margin: 15px 0px 0px;
+padding-bottom: 0!important;
+top: 0!important;
+}
+.VShare {
+padding: 0;
+margin: 0 auto;
+text-align: center;
+position: relative;
+margin-top: 30px!important;
+float: none;
+}
+.Sprite16 {
+background: url(images/sprites.png) 0 0 no-repeat;
+display: inline-block;
+height: 17px;
+width: 17px;
+vertical-align: top;
+}
+.SpNotifications, .SpGlobe {
+background-position: -32px -84px;
+}
+.SpNotifications:hover,.SpGlobe:hover{
+background-position: -32px -84px;
+background-color:lime;
+border-radius:17px;
+}
+.SpInbox, .SpEnvelope {
+background-position: 1px -99px;
+}
+.SpInbox:hover, .SpEnvelope:hover {
+background-position: 1px -99px;
+background-color:lime;
+border-radius:0px;
+}
+.SpBookmarks, .SpStar {
+background-position: -80px -116px;
+}
+.SpBookmarks:hover, .SpStar:hover {
+background-position: -80px -116px;
+background-color:lime;
+border-radius:17px;
+}
+.SpDashboard, .SpOptions, .SpCog {
+background-position: 1px -83px;
+}
+.SpDashboard:hover, .SpOptions:hover, .SpCog:hover {
+background-position: 1px -83px;
+background-color:lime;
+border-radius:17px;
+}
+.Handle > .SpEditProfile, .NavButton > .SpEditProfile {
+display: inline-block;
+width: 20px;
+height: 18px;
+line-height: 18px;
+vertical-align: top;
+}
 .TabLink,.TabLink:link,.TabLink:active,.TabLink:visited {
 background:#222;
 border:1px solid #444;
 color:#fff;
 font-size:14px;
 }
- 
+
 .TabLink:hover {
 -moz-box-shadow:0 0 5px #aaa;
 -webkit-box-shadow:0 0 5px #aaa;
@@ -831,51 +933,31 @@ box-shadow:0 0 5px #aaa;
 color:#0f0;
 font-size:14px;
 }
- 
+
 .Tabs .AdminCheck {
 bottom:5px;
 position:absolute;
 right:5px;
 }
- 
+
 .Tabs .Breadcrumbs {
 background:#222;
 }
- 
+
 .Tabs li a span {
 background:#4ec14c;
 color:#000;
 }
- 
-.Tabs.Profile.Tabs {
-background:url(images/parquet.jpg);
-background-color:transparent;
-}
- 
-.UploadProgress {
--moz-border-radius:2px;
--webkit-border-radius:2px;
-background:url(images/upload-progress-back1.gif)!important;
-border:1px solid #666;
-border-radius:2px;
+
+.User h1 .H{
 color:#fff;
-font-size:14px;
-height:39px;
-margin:10px 0;
-text-shadow:0 1px 1px #000;
-width:200px;
-z-index:0;
+font-size:20px;
+font-weight:400;
+padding:0;
 }
- 
-.User h1 {
-background:none repeat scroll 0 0 #222;
-color:#fff;
-font-size:24px;
-font-weight:700;
-padding:10px;
-text-align:center;
+.User{
+	padding:6px;
 }
- 
 .cleditorToolbar {
 background-attachment:scroll;
 background-clip:border-box;
@@ -886,19 +968,20 @@ background-position:0 0;
 background-repeat:repeat;
 background-size:30px auto;
 }
- 
-NonTab SignOut a {
-font-size:10pt;
+
+.NonTab.SignOut a {
+font-size:10px;
 font-weight:700;
 }
- 
+
 a {
 color:#fff;
 font-size:14px;
 font-weight:700;
+text-decoration: none;
 }
- 
-a.BigButton {
+
+a.Button.Primary.Action.NewDiscussion.BigButton,a.Button.BigButton.NewConversation.Primary {
 -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 -webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 background:url(images/woodnav.png);
@@ -909,55 +992,54 @@ box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 color:#FFF!important;
 cursor:pointer;
 display:block;
-font-size:16px;
+font-size:14px;
 font-weight:700;
 margin:0 0 10px;
-padding:7px;
+padding:10px;
 text-align:center;
 text-shadow:0 1px 0 #000;
 }
- 
-a.BigButton:hover {
+
+a.Button.Primary.Action.NewDiscussion.BigButton:hover,a.Button.BigButton.NewConversation.Primary:hover {
 -moz-box-shadow:0 0 5px #aaa;
 -webkit-box-shadow:0 0 5px #aaa;
 background:url(images/parquet.jpg);
 border:1px solid #222;
 box-shadow:0 0 5px #aaa;
 color:lime;
-font-size:16px!important;
+font-size:14px!important;
 }
- 
+
 a.Bookmark,a.Bookmarked,a.Bookmarking {
 background:url(images/star_sprite.png) top center no-repeat;
 }
- 
+
 a.Bookmarked {
 background-position:center center;
 }
- 
+
 a.Bookmarking {
 background-position:bottom center;
 }
- 
-a.Button,.Button,#Menu a,a.Back,a.Cancel {
--moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
--webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-background:url(images/woodnav.png);
-background-repeat:repeat-x;
-border:1px solid #222;
-border-radius:3px 3px 3px 3px;
-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-color:#fff;
-cursor:pointer;
-display:inline-block;
-font-size:14px;
-font-weight:700;
-margin:0 0 10px;
-padding:3px 6px;
-text-align:center;
-text-shadow:0 1px 0 #000;
+
+a.Button, .Button, #Menu a, a.Back, a.Cancel, .MenuItems a, .MenuItems a:link, .MenuItems a:visited, .MenuItems a:active, div.Popup a.Close span, div.AttachFileLink a, .EditCommentForm .Buttons .Cancel, .CommentForm .Buttons .Cancel a, .CommentForm .Buttons .Back a, .CommentForm .DraftButton,.CommentForm .WriteButton, .CommentForm .PreviewButton,.ReactButton,select, span.Email a, span.AddComment a,a.NavButton.ProfileButtons.Button-EditProfile,a.ProfileButtons,a.NavButton.MemberButtons,a.NavButton.Handle,.DataList a.Delete,#Content .FilterMenu li a,.Button.Active, .ButtonGroup.Open .Button.Handle, .Button:focus, .Button:active,.Note.Closed.SignInOrRegister a,span.onebit_mp3 embed,.st_fblike_large,.stButton,.ButtonBarMarkupHint b a,a.Bookmark{
+-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+background: url(images/woodnav.png);
+background-repeat: repeat-x;
+border: 1px solid #222;
+border-radius: 3px 3px 3px 3px;
+box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+color: #fff;
+cursor: pointer;
+font-size: 12px;
+font-weight: 700;
+margin: 0 0 10px;
+padding: 6px;
+text-align: center;
+text-shadow: 0 1px 0 #000;
 }
- 
+
 a.Button.SignInPopup,a.Button.ApplyButton {
 -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
 -webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
@@ -966,24 +1048,44 @@ display:inline-block;
 line-height:100%;
 margin:3px auto;
 padding:6px;
+font-size: 12px;
 }
- 
-a.Button.SignInPopup:hover,a.Button.ApplyButton:hover,.Button:hover,a.Back:hover {
+
+a.Button.SignInPopup:hover,a.Button.ApplyButton:hover,.Button:hover,a.Back:hover,.MenuItems a:hover, .MenuItems a:link:hover,div.Popup a.Close span:hover,div.AttachFileLink a:hover, .CommentForm .Buttons .Cancel a:hover, .CommentForm .Buttons .Back a:hover,.CommentForm .DraftButton:hover,.CommentForm .DraftButton:hover,.CommentForm .WriteButton:hover, .CommentForm .PreviewButton:hover,.ReactButton:hover,select:hover, span.Email a:hover, span.AddComment a:hover,a.NavButton.ProfileButtons.Button-EditProfile:hover,a.ProfileButtons:hover,a.NavButton.MemberButtons:hover,a.NavButton.Handle:hover,.DataList a.Delete:hover,#Content .FilterMenu li a:hover,.Note.Closed.SignInOrRegister a:hover,span.onebit_mp3:hover embed,.st_fblike_large:hover,.stButton:hover,.ButtonBarMarkupHint b a:hover,a.Bookmark:hover{
 -moz-box-shadow:0 0 5px #aaa;
 -webkit-box-shadow:0 0 5px #aaa;
-background:url(images/parquet.jpg);
-border:1px solid #222;
 box-shadow:0 0 5px #aaa;
+border:1px solid #222;
+background:url(images/parquet.jpg);
 color:lime;
+font-size: 12px;
 }
- 
+a.Bookmark, a.Bookmarked, a.Bookmarking {
+background: url(images/star_sprite10.png)no-repeat!important;
+display: inline-block;
+height: 22px;
+width: 22px;
+padding: 0!important;
+float: right;
+position: relative;
+}
+a.Bookmark{ 
+	background-color: rgba(255, 173, 84,0.8)!important;
+}
+a.Bookmark:hover{ 
+	background-color: rgba(0, 0, 0,0.5)!important;
+	-moz-box-shadow:0 0 5px #aaa!important;
+-webkit-box-shadow:0 0 5px #aaa!important;
+box-shadow:0 0 5px #aaa!important;
+}
+}
 a.Close span {
 color:#fff;
 font-family:arial;
 font-size:22px;
 font-weight:700;
 }
- 
+
 a.Close span:hover {
 color:#0f0;
 font-size:22px;
@@ -991,243 +1093,772 @@ font-weight:700;
 line-height:1;
 padding:0;
 }
- 
+
 a.Permalink {
 color:#ccc;
-font-size:10pt;
+font-size:10px;
 font-weight:700;
 }
- 
+
 a.Permalink:hover,a.CommentOption:hover {
 color:#0F0;
-font-size:10pt!important;
+font-size:10px!important;
 font-weight:700;
 }
- 
+
 a:hover,a:link:hover,a:hover image,a:link img:hover {
 color:#0F0;
-font-size:14px;
 font-weight:700;
 text-shadow:0 1px 0 #000;
 }
- 
+a.tooltip {
+text-decoration: none;
+float: right;
+}
+body{
+background-color:#222;
+}
 body {
-background-attachment:fixed;
-background-clip:border-box;
-background-image:url(images/redwood.jpg);
-background-origin:padding-box;
-background-position:center bottom -130px;
-background-repeat:no-repeat;
-background-size:100% 100%;
-color:#FFF;
-font-weight:700;
-text-shadow:0 1px 0 #000;
+background-attachment: fixed;
+background-clip: border-box;
+background-image: url(images/redwood.jpg);
+background-origin: padding-box;
+background-position: center bottom;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+color: #FFF;
+font-weight: 700;
+text-shadow: 0 1px 0 #000;
 }
- 
+
 body #Head h1 {
 background:transparent;
-border:0;
-display:inline-block;
-font-weight:700;
-margin:0;
-padding:21px 10px 4px 0;
+border: 0;
+font-weight: 700;
+margin: 0 auto;
+padding: 21px 10px 4px 0;
 }
- 
-body#dashboard_activity_index.Dashboard.Activity.index #Content,body.add #Content {
-width:97%;
+
+body.Entry .Box {
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+background:transparent;
+border: none;
+box-shadow: none;
+margin: 0 auto;
+width: 450px;
 }
- 
-body#dashboard_entry_register.Dashboard.Entry.register .Box {
--moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
--webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-background:#222;
-border:1px solid #555;
-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-margin:0 auto;
-width:450px;
-}
- 
+
 body.Entry #Content {
-background-color:transparent;
-float:none;
-margin:0 auto;
-text-align:center;
-width:97%;
+background-color: transparent;
+float: none;
+margin: 0 auto;
+text-align: center;
+width: 98%;
+max-width: 900px;
 }
- 
+
 body.Entry #Content form {
-padding:10px;
-text-align:left;
+padding: 10px;
+margin: 0 auto;
+width: 350px;
 }
- 
-body.Entry #Content h1,h1,#DiscussionForm form label,.Activities li.Condensed .Excerpt,.Box .PanelCategories .Heading,.Conversations .Conversation .Message,#MessageForm h2 {
+
+body.Entry #Content h1,h1,.Activities li.Condensed .Excerpt,.Box .PanelCategories .Heading,.Conversations .Conversation .Message,#MessageForm h2 {
 background-color:transparent;
 color:#FFF!important;
 font-size:20px;
 font-weight:700!important;
 text-align:center;
 }
- 
-body.Post #Content,.Message table {
+#DiscussionForm form label{
+	font-size:16px;
+	color:#FFF!important;
+}
+body.Post #Content,div.Message table {
 width:98%;
 }
- 
+
 body.Profile #Content {
 float:left;
 margin-left:10px;
-width:65%;
 }
- 
-body.Profile #Form_Invitation ul li label,body.Profile #Form_User ul li label,.Popup form ul li label {
+
+body.Profile #Form_Invitation ul li label,body.Profile #Form_User ul li label,div.Popup form ul li label {
 color:#FFF;
 display:block;
 font-size:14px;
 font-weight:700;
 margin:10px 0 0;
 }
- 
-body.Profile #Form_User ul li label.RadioLabel,body.Profile #Form_User ul li label.CheckBoxLabel,.Popup form ul li label.RadioLabel,.Popup form ul li label.CheckBoxLabel,#Menu li.NonTab,#Menu li.NonTab a {
+
+body.Profile #Form_User ul li label.RadioLabel,body.Profile #Form_User ul li label.CheckBoxLabel,div.Popup form ul li label.RadioLabel,div.Popup form ul li label.CheckBoxLabel,#Menu li.NonTab,#Menu li.NonTab a {
 font-weight:700;
 }
- 
+
 body.Profile #Panel {
 float:right!important;
 width:250px;
 }
- 
+
 body.Profile .PanelInfo {
 border-bottom:1px solid #555;
 margin:3px 0;
 }
- 
+
 body.Profile ul.Activities {
 border-top:1px solid #333;
 }
- 
-dd.IP a,dt.IP,dd.IP,dt.Visits,dd.Visits,dt.LastActive,dd.LastActive,dd.Joined,dt.Joined {
-display:block;
-visibility:visible;
+body.Dashboard.Plugin #Content {
+margin: 0 auto;
+text-align: center;
+width: 98%;
+float: none;
 }
- 
+body.Dashboard.Plugin.Contact textarea.TextBox {
+width: 90%!important;
+height: 100%;
+min-height: 100px;
+margin: 0 auto!important;
+position: relative;
+left: -13px;
+}
+body.Dashboard.Plugin.Contact input.DateBox, input.InputBox, input.SmallInput, textarea, input.DateBox:focus, input.InputBox:focus, input.SmallInput, textarea:focus {
+background: none repeat scroll 0 0 #222;
+border: 1px solid #666;
+border-radius: 2px 2px 2px 2px;
+color: #fff;
+font-size: 15px;
+font-weight: 700;
+width: auto;
+position: relative;
+}
+body.Dashboard.Plugin.Contact ul li label {
+font-size: 14px;
+padding-top: 6px;
+display: inline-block;
+}
+body.Dashboard.Plugin #Panel{
+	display:none!important
+}
+body.Entry form ul li label {
+font-size: 14px;
+font-weight: bold;
+padding: 6px 0 0;
+display: block;
+float: none;
+}
+body.Entry div.MainForm{
+	text-align:left;
+}
+body#dashboard_entry_password #Content input.Password, body#dashboard_entry_signin #Content input.Password, body#dashboard_entry_index #Content input.Password, .SignInPopup input.Password {
+width:auto;
+}
+body.NoPanel #Content, body.Conversations.add #Content, body.Vanilla.Post #Content {
+width: 98%;
+margin: 0 auto;
+float: none;
+}
+body.Dashboard.Profile.preferences.EditMode table.PreferenceGroup td.Description:hover, div.CategoryDescription:hover ,table.PreferenceGroup tbody tr:hover td{
+font-size: 14px;
+background:rgba(0,0,0,0.9)!important;
+color:#fff;
+text-shadow:0 1px 0 #000;
+border:1px solid #999
+}
+body.Dashboard.Profile.preferences.EditMode table.PreferenceGroup th, table.PreferenceGroup td, #Form_Invitation th, #Form_Invitation td {
+padding: 2px 6px;
+border-bottom: 1px solid #999;
+}
+body.Vanilla.Discussions.index a.Bookmark, a.Bookmarked, a.Bookmarking{
+float: right;
+position: relative;
+left: 15px;
+}
+body.Vanilla.Discussion.Index a.Bookmark, a.Bookmarked, a.Bookmarking{
+float: right;
+position: relative;
+left:0;
+}
+
+
+dd.IP a,dt.IP,dd.IP,dt.Visits,dd.Visits,dt.LastActive,dd.LastActive,dd.Joined,dt.Joined {
+display:inline-table;
+}
+dl.About{
+	margin-left: 6px;
+}
+
 dd.Name {
 color:#0F0;
-font-size:14pt;
+font-size:14px;
 font-weight:700;
 }
- 
+
 div#ConversationForm {
 width:98%!important;
 }
- 
+
+div.Box.About h4,div.Box.CategoryFollowToggleBox h4,div.Box.GuestBox h4 {
+background:url(images/parquet.jpg);
+}
+
+div.Comment {
+color:#3f3;
+
+font-size:12px!important;
+}
+
+div.DismissMessage.Info {
+background:#0F0;
+border-color:#222;
+border-style:solid;
+border-width:1px;
+
+font-size:12px;
+font-weight:700;
+}
+
+div.Entry.SingleEntryMethod, div.Entry.MultipleEntryMethods {
+background: transparent;
+border-color: #222;
+border-width: 1px;
+
+}
+
+div.Entry.SingleEntryMethod Label {
+color: #fff;
+}
+
+div.Entry.SingleEntryMethod h1 {
+background:url(images/woodnav.png);
+border-color:#222;
+border-style:solid;
+border-width:1px;
+color:#000;
+
+}
+
+div.Foot {
+background:transparent;
+border-color:#222;
+}
+
+div.ItemContent.Category.Read a,span.Breadcrumb.FirstCrumb a {
+font-size:16px;
+}
+
+
+div.Message {
+background:rgba(0,0,0,0);
+color:#fff;
+
+font-size:12px!important;
+font-weight:700;
+}
+
+div.Message img {
+-moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
+border:1px solid #222;
+box-shadow:2px 2px 3px rgba(0,0,0,0.5);
+width:98%!important;
+}
+
+div.Popup a,#ThemeCredit a {
+color:#ADADAD;
+}
+
+div.Popup a:hover {
+text-decoration:none;
+}
+
+div.Popup h1,div.Popup h2 {
+background:url(images/woodnav.png);
+background-repeat:repeat-x;
+border:1px solid #666;
+border-radius:0;
+box-shadow:0 0 2px #999;
+color:#fff;
+font-size:18px;
+}
+
+div.Popup,.PanelInfo .Active a {
+color:#111;
+font-size:14px;
+}
+div.Popup .Body, div.Popup .Content {
+background: #222!important;
+min-width: 420px;
+max-height: 600px;
+overflow-y: auto;
+overflow-x: hidden;
+width: 500px;
+}
+div.Popup a.Close span {
+right: 2px;
+top: -2px;
+position: absolute;
+color: #fff!important;
+font-size: 18px!important;
+border-radius: 18px;
+}
+
+div.Preview {
+background:#222!important;
+font-size:14px;
+}
+
+div.Tabs.Profile.Tabs {
+background:url(images/parquet.jpg);
+background-color:transparent;
+}
+
+div.User h1 {
+background:none repeat scroll 0 0 #222;
+color:#fff;
+font-size:20px;
+font-weight:700;
+text-align:center;
+text-transform:uppercase;
+}
+
 h1,h2,h3,h4,h5,h6 {
 color:#fff;
 font-family:"Helvetica Neue",Helvetica,arial,sans-serif;
 font-weight:700;
 margin:0;
 }
- 
-iframe#Form_body,textarea#Form_Body.TextBox {
-color:#fff!important;
+h2.H {
+font-size: 120%;
+text-align: center;
 }
- 
+iframe#Form_body, textarea#Form_Body.TextBox {
+color: #fff!important;
+font-size: 16px;
+}
+
 input#Form_Go.Button,input#Form_Go.Button:hover {
 -moz-box-shadow:0 0 5px #aaa;
 -webkit-box-shadow:0 0 5px #aaa;
 box-shadow:0 0 5px #aaa;
-font-size:12pt;
+font-size:12px;
 font-weight:700;
 }
- 
-input.DateBox,input.InputBox,input.SmallInput,textarea,input.DateBox:focus,input.InputBox:focus,input.SmallInput,textarea:focus {
-background:none repeat scroll 0 0 #222;
-border:1px solid #666;
-border-radius:2px 2px 2px 2px;
-color:#fff;
-font-size:15px;
-font-weight:700;
-margin:0;
-padding:3px;
-width:250px;
+
+input.DateBox, input.InputBox, input.SmallInput, textarea, input.DateBox:focus, input.InputBox:focus, input.SmallInput, textarea:focus, textarea, input[type=text] {
+background: none repeat scroll 0 0 #222!important;
+border: 1px solid #666;
+border-radius: 2px 2px 2px 2px;
+color: #fff!important;
+font-size: 15px;
+font-weight: 700;
+margin: 0;
+padding: 3px;
 }
- 
 span.Email a,span.AddComment a {
 color:#ccc;
-font-size:10pt;
+font-size:10px;
 }
- 
-table.PreferenceGroup td.Description,.CategoryDescription {
+
+table.PreferenceGroup td.Description,div.CategoryDescription {
 font-size:14px;
 }
- 
 textarea.MultiComplete {
-background:none repeat scroll 0 0 #000;
-height:20px;
-text-align:left;
-width:100%;
+background: none repeat scroll 0 0 #000;
+height: auto;
+width: 100%;
+color: #fff;
 }
- 
+
 ul#Menu li ul {
--moz-border-radius:5px;
--moz-box-shadow:0 0 2px #999;
--webkit-border-radius:5px;
--webkit-box-shadow:0 0 2px #999;
-background:url(images/transparent2.png);
-border:2px solid #222;
-border-radius:5px;
-box-shadow:0 0 2px #999;
-display:none;
-left:0;
-margin:0;
-padding:0;
-position:absolute;
-top:25px;
-visibility:hidden;
-width:165px;
+position: absolute;
+visibility: hidden;
+display: none;
+margin: 0;
+padding: 0;
+width: 110%!important;
+top: 22px;
+left: 0;
+background:none transparent;
+border: none!important;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none!important;
+z-index: 100;
+text-align: left;
 }
- 
+
 ul#Menu li ul li {
--moz-box-shadow:0 1px 1px rgba(0,0,0,.2);
--webkit-box-shadow:0 1px 1px rgba(0,0,0,.2);
-background:url(images/parquet.jpg)!important;
-border:none!important;
-box-shadow:0 1px 1px rgba(0,0,0,.2);
-display:block;
-float:none;
-font-size:12pt;
-margin:0;
-text-align:left;
-text-shadow:2px 2px 3px #000;
-z-index:9;
+-moz-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+background: none transparent;
+border: none!important;
+box-shadow: 0 1px 1px rgba(0,0,0,.2);
+display: block!important;
+float: none;
+font-size: 12px;
+margin: 0;
+text-align: left;
+text-shadow: 2px 2px 3px #000;
+z-index: 9;
 }
- 
+
 ul#Menu li ul li a {
-color:#fff!important;
-font-size:12pt!important;
-font-weight:700;
-text-align:left!important;
-text-shadow:0 1px 0 #000!important;
-width:149px;
+-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+background: url(images/woodnav.png);
+background-repeat: repeat-x;
+border: 1px solid #222!important;
+box-shadow: 2px 2px 3px rgba(0,0,0,0.5)!important;
+color: #fff;
+cursor: pointer;
+display: block!important;
+font-size: 12px;
+font-weight: 700;
+margin: 0;
+padding: 3px!important;
+text-shadow: 0 1px 0 #000;
+border-radius: 0;
+background-size: 100% 100%;
 }
- 
 ul#Menu li ul li a:hover {
 -moz-border-radius:4px;
 -webkit-border-radius:4px;
 background:url(images/parquet.jpg)repeat-x!important;
 border-bottom:1px solid #222;
-border-radius:4px;
-color:#FFF!important;
+color:#0f0!important;
 text-shadow:2px 2px 5px #000!important;
 }
- 
-ul.MessageList .Meta span.Votes {
-display:block;
-left:90%;
-line-height:normal;
-padding:0;
-position:absolute;
-text-align:center;
-}
- 
 ul.MessageList li.Item {
 background:transparent;
+}
+ul.MessageList div.Meta span.Votes { text-align: center; display: block; position: absolute; left: 90%; line-height: normal; padding: 0; }
+
+#menu-bar {
+background:url(images/woodnav.png);
+background-repeat:repeat-x;
+border:1px solid #999;
+box-shadow:0 0 2px #999;
+color:#fff;
+cursor:pointer;
+display:inline-block;
+font-size:14px;
+font-weight:700;
+margin:0 0 10px;
+padding:3px 6px;
+text-align:center;
+text-shadow:0 1px 0 #000;  
+margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  height: 35px;
+width:248px;
+  line-height: 100%;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+ 
+}
+#menu-bar li {
+  margin: 0px 6px 0px 6px;
+  padding: 0px 0px 7px 0px;
+  float: left;
+  position: relative;
+  list-style: none;
+}
+#menu-bar a {
+font-weight: bold;
+font-family: arial;
+font-style: normal;
+font-size: 20px;
+color:#fff;
+text-decoration: none;
+display: block;
+padding: 10px 20px 8px 80px;
+margin: 0 auto;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+text-shadow: 2px 1px 0px #000;
+}
+#menu-bar .current a, #menu-bar li:hover > a {
+  background:transparent;
+  color: lime;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  text-shadow: 2px 2px 3px #000000;
+}
+#menu-bar:hover{
+background:url(images/menu_bg.png) transparent;
+-moz-box-shadow:0 0 5px #aaa;
+-webkit-box-shadow:0 0 5px #aaa;
+box-shadow:0 0 5px #aaa;
+border:1px solid #666;
+}
+#menu-bar ul li:hover a, #menu-bar li:hover li a {
+  background:transparent;
+  border: none;
+  color: #fff;
+  -box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+#menu-bar li ul li a:hover {
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+background: url(images/woodnav.png)repeat-x!important;
+border-bottom: 1px solid #222;
+border-radius: 4px;
+color: #FFF!important;
+text-shadow: 2px 2px 5px #000!important;
+}
+#menu-bar ul a:hover {
+ background:url(images/transparent2.png);
+background-repeat:repeat-x;
+  color: lime !important;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  text-shadow: 2px 2px 3px #000000;
+}
+#menu-bar ul {
+background: url(images/parquet.jpg)!important;
+display: none;
+margin: 0;
+padding: 0;
+width: 100%;
+position: absolute;
+top: 0!important;
+left: 0;
+text-align: left;
+border: solid 1px #222;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-box-shadow: 2px 2px 3px #222222;
+-moz-box-shadow: 2px 2px 3px #222222;
+box-shadow: 2px 2px 3px #222222;
+z-index: 100;
+}
+#menu-bar li:hover > ul {
+  display: block;
+}
+#menu-bar ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+#menu-bar ul a {
+  padding:10px 0px 10px 15px;
+  color:#FFFFFF !important;
+  font-size:14px;
+  font-style:normal;
+  font-family:arial;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px #000000;
+}
+#menu-bar ul li:first-child > a {
+  border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+}
+#menu-bar ul li:last-child > a {
+  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+}
+#menu-bar:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#menu-bar {
+  display: inline-block;
+}
+  html[xmlns] #menu-bar {
+  display: block;
+}
+* html #menu-bar {
+  height: 1%;
+}
+
+.UploadProgress {
+margin: 10px 0;
+background:url('images/upload-progress-back1.gif')!important;
+width: 200px;
+height:39px;
+z-index: 0;
+color: #fff;
+text-shadow: 0 1px 1px #000;
+border: 1px solid #666;
+border-radius: 2px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+font-size: 14px;
+}
+div.AttachFileWrapper table.AttachFileContainer tr.FileAttachment td div.ProgressBar {
+   width: 126px;
+   border: 2px solid gray;
+   background-color:transparent;
+   height:39px;
+   background :url(images/upload-progress-back1.gif)!important;
+   border: 0px;
+font-size: 14px;
+}
+div.AttachFileWrapper table.AttachFileContainer tr.FileAttachment td div.ProgressBar div.ProgressTicker {
+   height:39px;
+   background-color:transparent;
+   background:url(images/upload-progress-back1.gif)!important;
+   line-height: 14px;
+   font-size: 14px;
+   color: #fff;
+   padding-right: 2px;
+   text-align: right;
+}
+iframe#onlineRadioFrame{
+	width:100%;
+	text-align:center;
+
+}
+textarea.TextBox {
+width:100%;
+height: 100%;
+min-height: 100px;
+}
+.cleditorMain {
+border: 1px solid #999;
+padding: 0 1px 1px;
+background-color: #222;
+}
+.cleditorMain textarea {
+border: none;
+color: #fff!important;
+margin: 0;
+padding: 0;
+overflow-y: auto;
+font-size: 16px;
+resize: none;
+outline: none /* webkit grip focus */;
+width: auto!important;
+}
+ul.token-input-list li input {
+min-width: 100px!important;
+padding: 6px!important;
+margin: 2px 0;
+background: #222;
+border: 1px solid #999!important;
+color: #fff!important;
+}
+ul.token-input-list {
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border: none!important;
+color: #fff;
+font-size: 15px;
+margin: 0 !important;
+padding: 3px;
+overflow: hidden;
+height: auto !important;
+height: 1%;
+width: 100%;
+cursor: text;
+min-height: 1px;
+z-index: 999;
+background-color: transparent!important;
+list-style-type: none;
+}
+.flag {
+width: 16px;
+height: 11px;
+cursor: help;
+margin-right: 5px!important;
+display: inline-block!important;
+float:none!important;
+}
+.flag span {
+position: absolute;
+margin: 0 20px!important;
+}
+img.Symbol {
+height: auto;
+width: 24px!important;
+vertical-align: text-bottom;
+}
+dl.About dt {
+color: #ccc;
+font-size: 12px;
+}
+dl.About dd a {
+font-size: 11px;
+vertical-align: text-bottom;
+}
+dl.About dd a:hover {
+font-size:12px;
+}
+
+#recaptcha_area, #recaptcha_table {
+width: 318px!important;
+margin: 0 auto;
+}
+hr{
+border: 3px dotted #222;
+}
+
+
+
+
+
+body {
+overflow-y: scroll;
+overflow-x: hidden;
+}
+* {
+margin: 0;
+padding: 0;
+}
+::-webkit-scrollbar {
+width:12px;
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius:10px;
+-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);
+background:rgb(163, 85, 0);
+border-radius:10px;
+}
+
+::-webkit-scrollbar-track {
+-webkit-border-radius:0px
+-webkit-box-shadow:inset 0 0 6px rgb(102, 102, 102);
+background:rgba(0, 0,0,0.9);
+border-radius:0px;
+}
+::-webkit-scrollbar-corner{
+	background:rgba(0, 0,0,0.9);
+}
+::-webkit-scrollbar-resizer{
+	background:rgba(0, 0,0,0.9);
+}
+input:-webkit-autofill {
+background-color: rgb(34, 34, 34);
+background-image: none;
+color: rgb(255,255,255);
+}
+#Panel div#YouTube.Box embed,#Panel div#YouTube.Box object {
+width: 100%!important;
+height: 100%;
 }
